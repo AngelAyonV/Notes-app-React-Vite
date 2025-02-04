@@ -3,6 +3,7 @@ import NoteList from "./NoteList";
 
 const NotesApp = () => {
   const [note, setNote] = useState("");
+  // NoteList
   const [submittedNote, setSubmittedNote] = useState([]);
 
   // Función que maneja los cambios en el input
