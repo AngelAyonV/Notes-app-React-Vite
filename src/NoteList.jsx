@@ -22,7 +22,9 @@ const NoteList = ({ note, removeCompletedNote }) => {
       {listNotes?.map((t, index) => (
         <div key={index} style={{ display: "flex", alignItems: "center" }}>
           <li>{t}</li>
-          <span>date</span>
+          <span style={{ margin: "0 10px" }}>
+            {new Date().toLocaleString()} {/* Fecha y hora actual */}
+          </span>
           <button
             className="delete-note-btn"
             onClick={() => ButtonRemoveNote(index)}
