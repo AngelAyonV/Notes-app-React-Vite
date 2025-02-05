@@ -4,7 +4,13 @@ import NoteList from "./NoteList";
 const NotesApp = () => {
   const [note, setNote] = useState("");
   // NoteList
-  const [submittedNote, setSubmittedNote] = useState([]);
+  const [submittedNote, setSubmittedNote] = useState([
+    "Comprar leche, pan y huevos",
+    "Preparar la presentación para la reunión de mañana",
+    "Llamar a Juan para felicitarlo por su cumpleaños",
+    "Repasar los conceptos de React Hooks",
+    "Ver la nueva temporada de mi serie favorita",
+  ]);
 
   // Función que maneja los cambios en el input
   const handleInputChange = (event) => {
@@ -43,7 +49,7 @@ const NotesApp = () => {
     setSubmittedNote(updatedNotes); // Actualizar el estado
   };
   return (
-    <div>
+    <div className="notes-app">
       <h1>Notes App</h1>
       <p>This is a simple notes app using React and Vite.</p>
       <input

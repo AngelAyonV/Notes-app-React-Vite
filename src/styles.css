@@ -1,0 +1,99 @@
+/* Estilos para NotesApp */
+.notes-app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .notes-app h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .notes-app p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .notes-app input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+  }
+  
+  .notes-app input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .notes-app button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .notes-app button:hover {
+    background-color: #0056b3;
+  }
+  
+  .notes-app button:active {
+    background-color: #004080;
+  }
+
+  /* Estilos para NoteList */
+.note-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .note-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .note-list li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .note-list span {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .note-list button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4d4d;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .note-list button:hover {
+    background-color: #cc0000;
+  }
+  
+  .note-list button:active {
+    background-color: #990000;
+  }
