@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const NoteList = ({ note, removeCompletedNote }) => {
-  const [listNotes, setlistNotes] = useState([]);
+  const [listNotes, setlistNotes] = useState();
   // Actualiza el estado solo cuando 'note' cambie
   useEffect(() => {
     if (Array.isArray(note)) {
@@ -11,6 +11,7 @@ const NoteList = ({ note, removeCompletedNote }) => {
         date: new Date().toISOString(), // Fecha única para cada nota
       }));
       setlistNotes(updatedNotes);
+      console.log(listNotes);
     } else {
       setlistNotes([]); // Previene errores si note no es un array
     }
@@ -23,13 +24,17 @@ const NoteList = ({ note, removeCompletedNote }) => {
     console.log(listNotes);
   };
   return (
-    <ol>
+    <ol className="note-list">
       {listNotes?.map((note, index) => (
         <div key={index} style={{ display: "flex", alignItems: "center" }}>
           <li>{note.text}</li>
           {/* Mostrar la fecha */}
           <span style={{ margin: "0 10px" }}>
-            {new Date(note.date).toLocaleString()} {/* Formatea la fecha */}
+            {new Date(note.date).toLocaleDateString("es-ES", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </span>
           <button
             className="delete-note-btn"
